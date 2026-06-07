@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Staff Console — All In One Visa</title>
+  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230D0D0F'/%3E%3Cg fill='none' stroke='%23FFD23F' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='7'/%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='M12 5a11 11 0 0 1 0 14 11 11 0 0 1 0-14z'/%3E%3C/g%3E%3C/svg%3E" />
+  <style>
+    body { background: var(--surface-2); }
+    .adminbar { position: sticky; top: 0; z-index: 10; background: #0D0D0F; color: #fff; display: flex; align-items: center; gap: var(--sp-2); padding: 0.7rem var(--sp-3); }
+    .adminbar img { height: 34px; }
+    .adminbar .who { margin-left: auto; font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+    .admin-wrap { max-width: 1200px; margin: var(--sp-4) auto; padding: 0 var(--sp-3); }
+    .login-card { max-width: 380px; margin: 12vh auto; }
+    .a-toolbar { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; margin-bottom: var(--sp-3); }
+    .a-stats { display: flex; gap: var(--sp-1); flex-wrap: wrap; }
+    .a-chip { background: #fff; border: 1px solid var(--border); border-radius: var(--r-pill); padding: 6px 12px; font-size: 0.82rem; font-weight: 600; color: var(--navy); }
+    .a-chip b { color: var(--gold-deep); }
+    .a-table-wrap { background: #fff; border: 1px solid var(--border); border-radius: var(--r-md); overflow: auto; }
+    table.a-table { width: 100%; border-collapse: collapse; font-size: 0.86rem; min-width: 1000px; }
+    .a-table th { text-align: left; background: #f4f3ee; color: var(--navy); font-weight: 600; padding: 10px 12px; position: sticky; top: 0; white-space: nowrap; }
+    .a-table td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+    .a-table tr:hover td { background: #fcfbf6; }
+    .a-ref { font-family: var(--font-mono); font-weight: 600; color: var(--navy); }
+    .a-sub { color: var(--ink-soft); font-size: 0.78rem; }
+    .a-table select, .a-table input.note { width: 100%; padding: 6px 8px; border: 1.5px solid var(--border); border-radius: 8px; font-size: 0.82rem; background: #fff; }
+    .a-save { padding: 6px 12px; font-size: 0.8rem; border-radius: 8px; background: var(--gold); color: var(--navy); font-weight: 700; white-space: nowrap; }
+    .a-save:hover { background: var(--gold-2); }
+    .a-save.saved { background: var(--success); color: #fff; }
+    .stage-pill { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; background: var(--gold-soft); color: var(--gold-deep); }
+    .a-empty { text-align: center; padding: var(--sp-5); color: var(--ink-soft); }
+    .err { color: var(--error); font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.1em; }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="loginView" style="display:none">
+    <div class="admin-wrap">
+      <div class="card login-card">
+        <div style="text-align:center;margin-bottom:var(--sp-3)">
+          <span style="display:inline-flex;align-items:center;justify-content:center;background:#0D0D0F;border-radius:16px;padding:14px 24px"><img src="logo.png" alt="All In One Visa" style="height:48px;display:block" /></span>
+          <h2 style="font-size:1.3rem;margin-top:var(--sp-3)">Staff Console</h2>
+          <p class="muted" style="font-size:0.88rem">Sign in to review enquiries and update applications.</p>
+        </div>
+        <form id="loginForm">
+          <div class="field"><label for="u">Username</label><input class="input" id="u" autocomplete="username" required /></div>
+          <div class="field mb-0"><label for="pw">Password</label><input class="input" id="pw" type="password" autocomplete="current-password" required /></div>
+          <p class="err" id="loginErr"></p>
+          <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashView" style="display:none">
+    <div class="adminbar">
+      <img src="logo.png" alt="All In One Visa" />
+      <strong style="color:#fff">Staff Console</strong>
+      <span class="who"><span id="whoUser"></span> · <button id="logout" style="color:var(--gold);font-weight:600">Sign out</button></span>
+    </div>
+    <div class="admin-wrap">
+      <div class="a-toolbar">
+        <div class="a-stats" id="stats"></div>
+        <input class="input" id="search" placeholder="Search name, email, ref, destination…" style="margin-left:auto;max-width:320px" />
+      </div>
+      <div class="a-table-wrap">
+        <table class="a-table">
+          <thead>
+            <tr>
+              <th>Reference</th><th>Received</th><th>Name</th><th>Contact</th><th>Trip</th><th>Service</th><th>Source</th>
+              <th style="min-width:170px">Stage</th><th style="min-width:200px">Internal / status note</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="a-empty" id="empty" style="display:none">No enquiries yet. They'll appear here the moment someone submits a form.</div>
+      </div>
+      <p class="muted" style="font-size:0.78rem;margin-top:var(--sp-2)">The customer sees the <strong>Stage</strong> (and its timeline) on the Track Application page. The note shows there too, so keep it customer‑friendly.</p>
+    </div>
+  </div>
+
+  <script>
+    var STATUSES = [];
+    var ALL = [];
+    var $ = function (s) { return document.querySelector(s); };
+
+    function api(path, opts) {
+      return fetch(path, Object.assign({ headers: { 'Content-Type': 'application/json' } }, opts || {}))
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, data: j }; }); });
+    }
+
+    /* ---- auth gate ---- */
+    function boot() {
+      api('/api/admin/me').then(function (r) {
+        if (r.ok) { showDash(r.data.user); } else { showLogin(); }
+      });
+    }
+    function showLogin() { $('#loginView').style.display = 'block'; $('#dashView').style.display = 'none'; }
+    function showDash(user) {
+      $('#loginView').style.display = 'none'; $('#dashView').style.display = 'block';
+      $('#whoUser').textContent = user;
+      loadApps();
+    }
+
+    $('#loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      $('#loginErr').textContent = '';
+      api('/api/admin/login', { method: 'POST', body: JSON.stringify({ username: $('#u').value, password: $('#pw').value }) })
+        .then(function (r) {
+          if (r.ok) boot();
+          else $('#loginErr').textContent = (r.data && r.data.error) || 'Sign in failed.';
+        });
+    });
+    $('#logout').addEventListener('click', function () {
+      api('/api/admin/logout', { method: 'POST' }).then(showLogin);
+    });
+
+    /* ---- applications ---- */
+    function loadApps() {
+      api('/api/admin/applications').then(function (r) {
+        if (!r.ok) return showLogin();
+        STATUSES = r.data.statuses; ALL = r.data.applications;
+        renderStats(); render(ALL);
+      });
+    }
+    function renderStats() {
+      var counts = {}; STATUSES.forEach(function (s) { counts[s] = 0; });
+      ALL.forEach(function (a) { counts[a.status] = (counts[a.status] || 0) + 1; });
+      var html = '<span class="a-chip">Total <b>' + ALL.length + '</b></span>';
+      STATUSES.forEach(function (s) { html += '<span class="a-chip">' + s + ' <b>' + (counts[s] || 0) + '</b></span>'; });
+      $('#stats').innerHTML = html;
+    }
+    function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]; }); }
+    function fmt(iso) { try { return new Date(iso).toLocaleString('en-GB', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }); } catch (e) { return iso; } }
+
+    function render(list) {
+      var tb = $('#rows'); tb.innerHTML = '';
+      $('#empty').style.display = list.length ? 'none' : 'block';
+      list.forEach(function (a) {
+        var tr = document.createElement('tr');
+        var opts = STATUSES.map(function (s) { return '<option' + (s === a.status ? ' selected' : '') + '>' + s + '</option>'; }).join('');
+        tr.innerHTML =
+          '<td><span class="a-ref">' + esc(a.ref) + '</span><div class="a-sub stage-pill">' + esc(a.status) + '</div></td>' +
+          '<td class="a-sub">' + fmt(a.createdAt) + '</td>' +
+          '<td>' + esc(a.name) + '</td>' +
+          '<td><a href="mailto:' + esc(a.email) + '">' + esc(a.email) + '</a><div class="a-sub">' + esc(a.phone) + '</div></td>' +
+          '<td>' + esc(a.destination || '—') + '<div class="a-sub">' + esc(a.purpose || '') + (a.nationality ? (' · from ' + esc(a.nationality)) : '') + '</div></td>' +
+          '<td>' + esc(a.service || '—') + '</td>' +
+          '<td class="a-sub">' + esc(a.source || '') + '</td>' +
+          '<td><select>' + opts + '</select></td>' +
+          '<td><input class="note" value="' + esc(a.statusNote || '') + '" placeholder="e.g. Awaiting bank statement" /></td>' +
+          '<td><button class="a-save">Save</button></td>';
+        var sel = tr.querySelector('select'), note = tr.querySelector('input.note'), btn = tr.querySelector('.a-save');
+        btn.addEventListener('click', function () {
+          btn.disabled = true; btn.textContent = 'Saving…';
+          api('/api/admin/update', { method: 'POST', body: JSON.stringify({ id: a.id, status: sel.value, statusNote: note.value }) })
+            .then(function (r) {
+              btn.disabled = false;
+              if (r.ok) { btn.textContent = 'Saved ✓'; btn.classList.add('saved'); a.status = sel.value; a.statusNote = note.value; renderStats(); setTimeout(function () { btn.textContent = 'Save'; btn.classList.remove('saved'); }, 1500); }
+              else { btn.textContent = 'Retry'; }
+            });
+        });
+        tb.appendChild(tr);
+      });
+    }
+
+    $('#search').addEventListener('input', function () {
+      var q = this.value.toLowerCase().trim();
+      if (!q) return render(ALL);
+      render(ALL.filter(function (a) {
+        return [a.ref, a.name, a.email, a.phone, a.destination, a.purpose, a.service, a.status].join(' ').toLowerCase().indexOf(q) > -1;
+      }));
+    });
+
+    boot();
+  </script>
+</body>
+</html>

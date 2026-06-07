@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All In One Visa, One application. Every visa. Zero confusion.</title>
+  <meta name="description" content="A visa application concierge that verifies every document before submission. Real humans review your application and flag issues before the embassy ever sees them." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230D0D0F'/%3E%3Cg fill='none' stroke='%23FFD23F' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='7'/%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='M12 5a11 11 0 0 1 0 14 11 11 0 0 1 0-14z'/%3E%3C/g%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============================ NAVIGATION ============================ -->
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="All In One Visa, home">
+        <img src="logo.png" class="brand__img" alt="All In One Visa" />
+      </a>
+      <div class="nav__links">
+        <a class="nav__link" href="do-i-need-a-visa.html">Do I need a visa?</a>
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__link nav__trigger" aria-expanded="false" aria-haspopup="true">By purpose of visit <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__menu" role="menu">
+        <a role="menuitem" href="visa-for-business.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></span><span class="mi-txt"><strong>Business trips</strong><span class="mi-sub">Meetings, conferences, deals</span></span></a>
+        <a role="menuitem" href="visa-for-study.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5"/></svg></span><span class="mi-txt"><strong>Study & education</strong><span class="mi-sub">Universities & courses abroad</span></span></a>
+        <a role="menuitem" href="visa-for-tourism.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5l-7 7 3 1 1 3 3-3"/><path d="M21 3 9 15"/><path d="M21 3l-4 14-4-4"/></svg></span><span class="mi-txt"><strong>Tourism & travel</strong><span class="mi-sub">Holidays & sightseeing</span></span></a>
+        <a role="menuitem" href="visa-for-family.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.4 3-5.5A4.5 4.5 0 0 0 12 5 4.5 4.5 0 0 0 2 8.5c0 2.1 1.5 4 3 5.5l7 7z"/></svg></span><span class="mi-txt"><strong>Family & friends</strong><span class="mi-sub">Weddings, visits, new babies</span></span></a>
+        <a role="menuitem" href="visa-for-cruise.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l1.6-5.5a1 1 0 0 1 1-.7h12.8a1 1 0 0 1 1 .7L21 18"/><path d="M12 11.8V6l5 3"/><path d="M2 21c1 0 1.5-1 3-1s2 1 3.5 1 2-1 3.5-1 2 1 3.5 1 2-1 3-1"/></svg></span><span class="mi-txt"><strong>Cruises</strong><span class="mi-sub">Multi‑country sailings</span></span></a>
+        <a class="nav__menu-feat" href="pricing.html"><span class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></span><span class="mi-txt"><strong>Need it urgently?</strong><span class="mi-sub">See expedited options →</span></span></a>
+        </div>
+      </div>
+      <div class="nav__item nav__item--has-menu">
+        <button type="button" class="nav__link nav__trigger" aria-expanded="false" aria-haspopup="true">By country <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="nav__menu nav__menu--wide" role="menu">
+        <div class="nav__menu-col"><p class="nav__menu-head">Europe</p><a href="visa-schengen.html"><span class="flag">🇪🇺</span> <span class="cn">Schengen Area</span></a><a href="visa-france.html"><span class="flag">🇫🇷</span> <span class="cn">France</span></a><a href="visa-italy.html"><span class="flag">🇮🇹</span> <span class="cn">Italy</span></a><a href="visa-switzerland.html"><span class="flag">🇨🇭</span> <span class="cn">Switzerland</span></a><a href="visa-germany.html"><span class="flag">🇩🇪</span> <span class="cn">Germany</span></a><a href="visa-spain.html"><span class="flag">🇪🇸</span> <span class="cn">Spain</span></a><a href="visa-uk.html"><span class="flag">🇬🇧</span> <span class="cn">United Kingdom</span></a></div>
+        <div class="nav__menu-col"><p class="nav__menu-head">Americas</p><a href="visa-usa.html"><span class="flag">🇺🇸</span> <span class="cn">United States</span></a><a href="visa-canada.html"><span class="flag">🇨🇦</span> <span class="cn">Canada</span></a><p class="nav__menu-head">Middle East</p><a href="visa-uae.html"><span class="flag">🇦🇪</span> <span class="cn">United Arab Emirates</span></a></div>
+        <div class="nav__menu-col"><p class="nav__menu-head">Asia‑Pacific</p><a href="visa-australia.html"><span class="flag">🇦🇺</span> <span class="cn">Australia</span></a><a href="visa-india.html"><span class="flag">🇮🇳</span> <span class="cn">India</span></a></div>
+        </div>
+      </div>
+      <a class="nav__link" href="pricing.html">Pricing</a>
+      </div>
+            <a class="btn btn--primary nav__cta hide-mobile" href="contact.html">Talk to a Visa Expert</a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="m-link" href="do-i-need-a-visa.html">Do I need a visa?</a>
+    <a class="m-link" href="pricing.html">Pricing</a>
+    <div class="m-group">
+      <p class="m-group__head">By purpose of visit</p>
+      <a href="visa-for-business.html">Business trips</a>
+        <a href="visa-for-study.html">Study & education</a>
+        <a href="visa-for-tourism.html">Tourism & travel</a>
+        <a href="visa-for-family.html">Family & friends</a>
+        <a href="visa-for-cruise.html">Cruises</a>
+    </div>
+    <div class="m-group">
+      <p class="m-group__head">By country</p>
+      <div class="m-group__grid">
+          <a href="visa-schengen.html">🇪🇺 Schengen Area</a>
+          <a href="visa-france.html">🇫🇷 France</a>
+          <a href="visa-italy.html">🇮🇹 Italy</a>
+          <a href="visa-switzerland.html">🇨🇭 Switzerland</a>
+          <a href="visa-germany.html">🇩🇪 Germany</a>
+          <a href="visa-spain.html">🇪🇸 Spain</a>
+          <a href="visa-uk.html">🇬🇧 United Kingdom</a>
+          <a href="visa-usa.html">🇺🇸 United States</a>
+          <a href="visa-canada.html">🇨🇦 Canada</a>
+          <a href="visa-australia.html">🇦🇺 Australia</a>
+          <a href="visa-india.html">🇮🇳 India</a>
+          <a href="visa-uae.html">🇦🇪 United Arab Emirates</a>
+      </div>
+    </div>
+    <div class="mobile-menu__foot">
+      <a class="btn btn--primary btn--block" href="contact.html">Talk to a Visa Expert</a>
+      <a class="mobile-menu__phone" href="tel:+18885550142">Talk to us · +1 (888) 555‑0142</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ============================== HERO ============================== -->
+    <header class="hero hero--center">
+      <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1600&q=80&auto=format&fit=crop')"></div>
+      <div class="hero__scrim"></div>
+      <div class="container hero__inner">
+        <div class="hero__center">
+          <span class="hero__kicker">Quicker · Easier · Done</span>
+          <h1 style="text-transform: capitalize;">Expedited Visa without the <span class="accent">headache</span></h1>
+          <p class="hero__sub">Tell us your trip. See the real processing time and fees in seconds, then let a human handle the whole application with you.</p>
+
+          <div class="hero-wiz-card">
+            <form id="heroWiz" novalidate aria-label="Check requirements and request help">
+              <!-- STEP 1: your trip -->
+              <section class="wiz-step is-active" data-step="1">
+                <div class="resident-pill" style="margin-bottom:var(--sp-2)">
+                  <label for="wResident">Resident of</label>
+                  <select id="wResident" class="resident-select"></select>
+                </div>
+                <div class="wiz-row">
+                  <div class="field mb-0">
+                    <label for="wFrom">Going from</label>
+                    <select id="wFrom" class="select"></select>
+                  </div>
+                  <div class="field mb-0">
+                    <label for="wDest">Destination</label>
+                    <select id="wDest" class="select"></select>
+                    <p class="field__error">Pick your destination.</p>
+                  </div>
+                </div>
+                <button type="button" class="btn btn--primary btn--block btn--lg mt-3" data-next="2">Continue
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </section>
+
+              <!-- STEP 2: purpose + service -->
+              <section class="wiz-step" data-step="2">
+                <div class="wiz-row">
+                  <div class="field mb-0">
+                    <label for="wPurpose">Purpose of visit</label>
+                    <select id="wPurpose" class="select"></select>
+                    <p class="field__error">Choose your purpose.</p>
+                  </div>
+                  <div class="field mb-0">
+                    <label for="wService">Which service you need</label>
+                    <select id="wService" class="select"></select>
+                  </div>
+                </div>
+                <div class="form-nav mt-3">
+                  <button type="button" class="btn btn--ghost" data-back="1">Back</button>
+                  <button type="button" class="btn btn--primary btn--lg" data-next="3">Check the current processing time</button>
+                </div>
+              </section>
+
+              <!-- STEP 3: results + lead -->
+              <section class="wiz-step" data-step="3">
+                <div class="wiz-result">
+                  <p class="wiz-result__head">Here's the latest for <strong id="wrDest">your trip</strong>:</p>
+                  <div class="wiz-result__grid">
+                    <div class="wiz-fact"><dt>Processing time</dt><dd id="wrTime">—</dd></div>
+                    <div class="wiz-fact"><dt>Govt. visa fee</dt><dd id="wrFee">—</dd></div>
+                    <div class="wiz-fact"><dt>Expedite</dt><dd id="wrExp" style="font-size:0.9rem">—</dd></div>
+                  </div>
+                  <p class="wiz-result__note">Indicative only. Your specialist confirms the exact timeline, fees and the fastest route for your case.</p>
+                </div>
+                <p class="wiz-cta-line">Want us to handle it? Tell us where to reach you:</p>
+                <div class="field"><label for="wName">Full name</label><input class="input" type="text" id="wName" placeholder="Jordan Rivera" autocomplete="name" required /><p class="field__error">Please enter your name.</p></div>
+                <div class="wiz-row">
+                  <div class="field"><label for="wEmail">Email</label><input class="input" type="email" id="wEmail" placeholder="you@email.com" autocomplete="email" required /><p class="field__error">Check the email format.</p></div>
+                  <div class="field"><label for="wPhone">Phone / WhatsApp</label><input class="input" type="tel" id="wPhone" placeholder="+1 (555) 000‑0000" autocomplete="tel" required /><p class="field__error">A number we can reach you on.</p></div>
+                </div>
+                <div class="form-nav">
+                  <button type="button" class="btn btn--ghost" data-back="2">Back</button>
+                  <button type="submit" class="btn btn--primary btn--lg">Submit your Request</button>
+                </div>
+              </section>
+            </form>
+            <div class="wiz-dots" aria-hidden="true"><span class="is-active"></span><span></span><span></span></div>
+          </div>
+          <p class="hero__microcopy">Free to check. No payment, ever. A real visa expert follows up.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================ PROBLEM ============================= -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">The real problem</p>
+          <h2>Getting a visa shouldn't feel like a second job.</h2>
+          <p>You're not bad at paperwork. The system is just genuinely confusing, and the stakes are your trip. Here's what trips people up most.</p>
+        </div>
+
+        <div class="grid grid-3" data-stagger>
+          <article class="card card--lift reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 9.5a1.5 1.5 0 1 1 2.5 1.1c-.6.5-1 .8-1 1.6"/><path d="M10.5 14.2h.01"/></svg>
+            </div>
+            <h3>Confusing government portals</h3>
+            <p>Instructions written in 2009, broken links, and rules that contradict the page before. You're left guessing at what's actually required today.</p>
+          </article>
+
+          <article class="card card--lift reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9.5 11.5l5 5M14.5 11.5l-5 5"/></svg>
+            </div>
+            <h3>One wrong document = rejection</h3>
+            <p>A photo a millimeter off, a missing bank statement, the wrong date format. Small mistakes get applications denied, and the fee is rarely refundable.</p>
+          </article>
+
+          <article class="card card--lift reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 1 0-9-9"/><path d="M12 7v5l3 2"/><path d="M3 12l-2 2M3 12l2 2"/></svg>
+            </div>
+            <h3>Weeks of back‑and‑forth</h3>
+            <p>Resubmit. Wait. Get a vague email. Resubmit again. The time you wanted to spend planning the trip disappears into a queue you can't see.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= REAL PEOPLE BAND ====================== -->
+    <section class="section">
+      <div class="container">
+        <div class="split">
+          <figure class="media-figure reveal-left">
+            <img class="media-img" src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=900&q=80&auto=format&fit=crop" alt="A group of friends laughing together while travelling in the mountains" loading="lazy" style="aspect-ratio:4/3" />
+            <figcaption class="media-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Real people, real trips</figcaption>
+          </figure>
+          <div class="reveal-right">
+            <p class="eyebrow">People, not portals</p>
+            <h2 style="margin:var(--sp-2) 0">A real human has your back, the whole way.</h2>
+            <p>You'll always know who's handling your case. We answer your questions, chase the details, and double‑check the things that get applications rejected, so you can get back to planning the fun part.</p>
+            <a class="link-arrow mt-3" href="about.html" style="display:inline-flex">Meet the team
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= HOW WE'RE DIFFERENT =================== -->
+    <section class="section section--surface-2">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why us</p>
+          <h2>We're not a form‑filler.<br />We're your visa team.</h2>
+          <p>Plenty of services will autofill a PDF and wish you luck. We do the part that actually keeps you from getting rejected.</p>
+        </div>
+
+        <div class="diff-grid" data-stagger>
+          <article class="diff reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3 7.5-8 9-5-1.5-8-4.5-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3>Verification before submission</h3>
+              <p>We check every document against the current requirements <strong>before</strong> it's sent, not after a rejection arrives.</p>
+            </div>
+          </article>
+
+          <article class="diff reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.2"/><path d="M15 20a5 5 0 0 1 6-3.5"/></svg>
+            </div>
+            <div>
+              <h3>Real humans review every application</h3>
+              <p>A trained specialist reads your file end to end. Not a template, not a bot, a person who has seen this visa approved a hundred times.</p>
+            </div>
+          </article>
+
+          <article class="diff reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4l9 3-9 3"/><path d="M14 7l5 1.7-5 1.7"/><path d="M2 21h6"/></svg>
+            </div>
+            <div>
+              <h3>We flag issues before the embassy does</h3>
+              <p>If something looks like it could trigger a question, we catch it early and tell you how to fix it, in plain English.</p>
+            </div>
+          </article>
+
+          <article class="diff reveal">
+            <div class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9a3 3 0 0 0-3-2c-1.7 0-3 1-3 2.3 0 2.7 6 1.3 6 4 0 1.4-1.4 2.4-3 2.4a3 3 0 0 1-3-2"/><path d="M12 5v2M12 17v2"/></svg>
+            </div>
+            <div>
+              <h3>Money‑back guarantee if we err</h3>
+              <p>If your application is rejected because of a mistake on our side, you get your money back. We own our work.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== HOW IT WORKS ======================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Three steps. No surprises.</h2>
+          <p>From "which visa do I even need?" to a submitted application, without the late‑night spiral of browser tabs.</p>
+        </div>
+
+        <div class="steps" role="list">
+          <div class="steps__line" aria-hidden="true"></div>
+          <div class="step reveal" role="listitem">
+            <div class="step__num">1</div>
+            <h3>Check your trip, free</h3>
+            <p>Pick your destination and purpose above and instantly see the real processing time, fees, and expedite options.</p>
+          </div>
+          <div class="step reveal" data-delay="2" role="listitem">
+            <div class="step__num">2</div>
+            <h3>Send your request</h3>
+            <p>Just your name, email and phone. No payment, no long forms. A real specialist replies within 2 business hours.</p>
+          </div>
+          <div class="step reveal" data-delay="4" role="listitem">
+            <div class="step__num">3</div>
+            <h3>We handle it, you track</h3>
+            <p>We fill the forms, pre‑check every document, submit on your behalf, and keep you posted to the decision.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-4 reveal">
+          <a class="btn btn--dark" href="how-it-works.html">Walk through the full process
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== SOCIAL PROOF ========================= -->
+    <section class="section section--surface-2">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Social proof</p>
+          <h2>Real people. Real visas. Real trips.</h2>
+          <p>The trips happened because the paperwork didn't get in the way. Here are a few of them.</p>
+        </div>
+
+        <div class="grid grid-3" data-stagger>
+          <article class="testimonial reveal" data-tilt>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+            </div>
+            <p class="testimonial__quote">I was dreading the US visa interview prep for the whole family. They organized every document by person and told me exactly what to say. We were approved together.</p>
+            <div class="testimonial__who">
+              <img src="https://i.pravatar.cc/80?img=45" alt="" loading="lazy" width="48" height="48" />
+              <div>
+                <div class="testimonial__name">Maria Santos, 34</div>
+                <div class="testimonial__meta">Portugal · <span class="visa">US Tourist Visa</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial reveal" data-delay="2" data-tilt>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+            </div>
+            <p class="testimonial__quote">My first UK student visa was rejected and I had no idea why. They found the gap in my financial evidence in ten minutes. Second attempt: approved.</p>
+            <div class="testimonial__who">
+              <img src="https://i.pravatar.cc/80?img=12" alt="" loading="lazy" width="48" height="48" />
+              <div>
+                <div class="testimonial__name">Tariq Al‑Rashid, 28</div>
+                <div class="testimonial__meta">UAE · <span class="visa">UK Student Visa</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial reveal" data-delay="4" data-tilt>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 6.3 6.9.9-5 4.8 1.2 6.9L12 17.8 5.9 21l1.2-6.9-5-4.8 6.9-.9z"/></svg>
+            </div>
+            <p class="testimonial__quote">I travel across Europe for work every year. The multiple‑entry Schengen used to take me a full weekend. Now I forward my documents and it's handled. That's the whole pitch.</p>
+            <div class="testimonial__who">
+              <img src="https://i.pravatar.cc/80?img=33" alt="" loading="lazy" width="48" height="48" />
+              <div>
+                <div class="testimonial__name">Yuki Tanaka, 52</div>
+                <div class="testimonial__meta">Japan · <span class="visa">Schengen Multi‑Entry</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FINAL CTA ========================== -->
+    <section class="section section--navy">
+      <div class="container">
+        <div class="cta-band reveal">
+          <p class="eyebrow" style="justify-content:center">Ready when you are</p>
+          <h2>Your next trip is one application away.</h2>
+          <p>No hidden fees. No confusing forms. Just you, your documents, and us.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="apply.html">Get Started, Free</a>
+            <a class="btn btn--ghost btn--lg" href="contact.html">Talk to a Visa Expert</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== FOOTER ============================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand footer__col--brand">
+          <a class="brand" href="index.html" aria-label="All In One Visa, home">
+            <img src="logo.png" class="brand__img" alt="All In One Visa" />
+          </a>
+          <p class="footer__desc">One application. Every visa. Zero confusion. We remove the anxiety from getting a visa so you can get back to the trip.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="All In One Visa on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="All In One Visa on X"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+            <a href="#" aria-label="All In One Visa on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 13v4"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col--services">
+          <h4>Services</h4>
+          <a class="f-link" href="visa-types.html">Tourist Visas</a>
+          <a class="f-link" href="visa-types.html">Student Visas</a>
+          <a class="f-link" href="visa-types.html">Work Visas</a>
+          <a class="f-link" href="visa-types.html">Business Visas</a>
+          <a class="f-link" href="visa-types.html">Schengen Visas</a>
+        </div>
+        <div class="footer__col--company">
+          <h4>Company</h4>
+          <a class="f-link" href="about.html">About Us</a>
+          <a class="f-link" href="how-it-works.html">How It Works</a>
+          <a class="f-link" href="pricing.html">Pricing</a>
+          <a class="f-link" href="contact.html">Contact</a>
+          <a class="f-link" href="contact.html">Talk to a Visa Expert</a>
+        </div>
+        <div class="footer__col--news">
+          <h4>Stay in the know</h4>
+          <p class="footer__desc" style="margin-top:0">Visa rule changes, deadline reminders, and travel‑ready tips. No spam.</p>
+          <form class="footer__news" data-newsletter>
+            <label for="news-email" class="sr-only" style="position:absolute;left:-9999px">Email address</label>
+            <input id="news-email" type="email" placeholder="you@email.com" required autocomplete="email" />
+            <button type="submit">Join</button>
+          </form>
+          <p class="footer__desc" style="margin-top:var(--sp-2)"><a class="f-link" href="tel:+19292569643" style="padding:0">+1 (929) 256-9643</a></p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> All In One Visa. Built with care for travelers everywhere.</span>
+        <nav aria-label="Legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="track-application.html">Track application</a>
+          <a href="contact.html">Support</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js?v=11"></script>
+  <script>
+    /* Homepage hero wizard: trip -> purpose/service -> processing time + request */
+    (function () {
+      var form = document.getElementById('heroWiz');
+      if (!form) return;
+      var q = function (s) { return form.querySelector(s); };
+
+      var countries = ['United States of America','United Kingdom','Canada','Australia','India','China','Brazil','Mexico','Germany','France','Spain','Italy','Netherlands','Portugal','Ireland','Japan','South Korea','Singapore','Philippines','Indonesia','Malaysia','Thailand','Vietnam','United Arab Emirates','Saudi Arabia','Qatar','South Africa','Nigeria','Kenya','Egypt','Türkiye','Poland','Sweden','Norway','Switzerland','New Zealand','Argentina','Colombia','Chile'];
+      var destinations = ['United States','United Kingdom','Schengen Area (Europe)','Canada','Australia','Japan','United Arab Emirates','China','India','Singapore','Thailand','Brazil','South Africa','Mexico','New Zealand','Saudi Arabia'];
+      var purposes = ['Tourism / holiday','Business','Study / education','Work / employment','Visiting family & friends','Transit','Medical treatment','Other'];
+      var servicesList = ['Full Service','Assistance in Form Filling','Application Creation','Document Pre‑check & Authentication','Electronic Travel Authorisation','E‑Visa Services','Appointment Scheduling','Passport Issuance Assistance','Not sure yet, recommend for me'];
+      var destInfo = {
+        'United States': { t: '3–5 weeks', f: 'US$185', e: 'Priority interview slots' },
+        'United Kingdom': { t: '~3 weeks', f: '£115', e: '5‑day priority service' },
+        'Schengen Area (Europe)': { t: '~15 days', f: '€90', e: 'Fast‑track at select consulates' },
+        'Canada': { t: '2–4 weeks', f: 'C$100', e: 'Express for eligible cases' },
+        'Australia': { t: '2–4 weeks', f: 'A$190', e: 'Priority processing' },
+        'Japan': { t: '5–7 days', f: '¥3,000', e: 'Express handling' },
+        'United Arab Emirates': { t: '3–5 days', f: 'US$90', e: '24–48 hr express' },
+        'China': { t: '4–7 days', f: 'US$140', e: 'Rush options' },
+        'India': { t: '3–5 days (e‑Visa)', f: 'US$25–80', e: 'Urgent e‑Visa' },
+        'Singapore': { t: '3–5 days', f: 'S$30', e: 'Online processing' },
+        'Thailand': { t: '5–10 days', f: 'US$40', e: 'Express at some centres' },
+        'Brazil': { t: '5–10 days', f: 'US$80', e: 'e‑Visa fast options' },
+        'South Africa': { t: '5–10 days', f: 'US$35', e: 'Premium options' },
+        'Mexico': { t: '5–10 days', f: 'US$48', e: 'Instant e‑Visa for many' },
+        'New Zealand': { t: '2–4 weeks', f: 'NZ$246', e: 'Priority processing' },
+        'Saudi Arabia': { t: '2–4 days', f: 'US$140', e: 'Instant e‑Visa for many' }
+      };
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      var fill = function (sel, items, ph, selected) {
+        var h = ph ? '<option value="">' + ph + '</option>' : '';
+        items.forEach(function (it) { h += '<option' + (it === selected ? ' selected' : '') + '>' + it + '</option>'; });
+        sel.innerHTML = h;
+      };
+      fill(q('#wResident'), countries, null, 'United States of America');
+      fill(q('#wFrom'), countries, null, 'United States of America');
+      fill(q('#wDest'), destinations, 'Select destination');
+      fill(q('#wPurpose'), purposes, 'Select purpose');
+      fill(q('#wService'), servicesList, 'Select a service');
+
+      var steps = form.querySelectorAll('.wiz-step');
+      var dots = document.querySelectorAll('.wiz-dots span');
+      var show = function (n) {
+        steps.forEach(function (s) { s.classList.toggle('is-active', +s.dataset.step === n); });
+        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === n - 1); });
+      };
+      var flag = function (el) {
+        var f = el.closest('.field'); if (f) { f.classList.add('has-error', 'shake'); setTimeout(function () { f.classList.remove('shake'); }, 400); }
+        if (el.focus) el.focus();
+      };
+      form.addEventListener('change', function (e) { var f = e.target.closest('.field'); if (f && e.target.value) f.classList.remove('has-error'); });
+
+      form.querySelectorAll('[data-next]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var n = +btn.dataset.next;
+          if (n === 2 && !q('#wDest').value) { flag(q('#wDest')); return; }
+          if (n === 3) { if (!q('#wPurpose').value) { flag(q('#wPurpose')); return; } renderResult(); }
+          show(n);
+        });
+      });
+      form.querySelectorAll('[data-back]').forEach(function (btn) {
+        btn.addEventListener('click', function () { show(+btn.dataset.back); });
+      });
+
+      function renderResult() {
+        var d = q('#wDest').value;
+        var info = destInfo[d] || { t: '1–3 weeks', f: 'Varies', e: 'Express options available' };
+        document.getElementById('wrDest').textContent = d || 'your trip';
+        document.getElementById('wrTime').textContent = info.t;
+        document.getElementById('wrFee').textContent = info.f;
+        document.getElementById('wrExp').textContent = info.e;
+      }
+
+      form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        var ok = true, first = null;
+        var checks = [['#wName', function (v) { return !!v.trim(); }], ['#wEmail', function (v) { return emailRe.test(v); }], ['#wPhone', function (v) { return v.trim().length >= 6; }]];
+        checks.forEach(function (c) { var el = q(c[0]); if (!c[1](el.value)) { ok = false; if (!first) first = el; flag(el); } });
+        if (!ok) { if (first) first.focus(); return; }
+        var nm = q('#wName').value.trim();
+        var payload = {
+          name: nm, email: q('#wEmail').value, phone: q('#wPhone').value,
+          residence: q('#wResident').value, nationality: q('#wFrom').value,
+          destination: q('#wDest').value, purpose: q('#wPurpose').value,
+          service: q('#wService').value, source: 'hero wizard'
+        };
+        try {
+          localStorage.setItem('aiov_service', payload.service);
+          localStorage.setItem('aiov_application', JSON.stringify({
+            aDest: payload.destination, aType: payload.purpose, aNat: payload.nationality,
+            aFirst: nm.split(' ')[0], aLast: nm.split(' ').slice(1).join(' '),
+            aEmail: payload.email, aPhone: payload.phone
+          }));
+        } catch (e) {}
+        var sb = ev.submitter; if (sb) { sb.disabled = true; sb.textContent = 'Submitting…'; }
+        fetch('/api/submit', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          .then(function (r) { return r.json(); })
+          .then(function (j) { window.location.href = 'success.html' + (j && j.ref ? ('?ref=' + encodeURIComponent(j.ref)) : ''); })
+          .catch(function () { window.location.href = 'success.html'; });
+      });
+    })();
+  </script>
+</body>
+</html>

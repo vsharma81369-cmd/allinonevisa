@@ -1,0 +1,95 @@
+{
+  "applications": [
+    {
+      "id": "587e38e4-6cf3-4513-8a6f-897000d0abaf",
+      "ref": "AIOV-2026-62128",
+      "createdAt": "2026-06-07T01:52:29.566Z",
+      "updatedAt": "2026-06-07T01:52:29.566Z",
+      "name": "Yuki Tanaka",
+      "email": "yuki@example.com",
+      "phone": "+81 90 444 555",
+      "residence": "",
+      "nationality": "",
+      "destination": "Schengen Area (Europe)",
+      "purpose": "Business",
+      "service": "E‑Visa Services",
+      "notes": "",
+      "source": "contact form",
+      "status": "Enquiry received",
+      "statusNote": "",
+      "history": [
+        {
+          "status": "Enquiry received",
+          "note": "Enquiry received from the website.",
+          "at": "2026-06-07T01:52:29.566Z"
+        }
+      ]
+    },
+    {
+      "id": "f62e6eb6-cf1f-4d61-b7e1-5d04fcb3452f",
+      "ref": "AIOV-2026-81834",
+      "createdAt": "2026-06-07T01:52:29.564Z",
+      "updatedAt": "2026-06-07T01:52:29.564Z",
+      "name": "Tariq Al-Rashid",
+      "email": "tariq@example.com",
+      "phone": "+971 50 222 333",
+      "residence": "",
+      "nationality": "",
+      "destination": "United Kingdom",
+      "purpose": "Study / education",
+      "service": "Document Pre‑check & Authentication",
+      "notes": "",
+      "source": "application form",
+      "status": "Enquiry received",
+      "statusNote": "",
+      "history": [
+        {
+          "status": "Enquiry received",
+          "note": "Enquiry received from the website.",
+          "at": "2026-06-07T01:52:29.564Z"
+        }
+      ]
+    },
+    {
+      "id": "bf3657bb-199f-467a-a985-b31c1e7c4fdc",
+      "ref": "AIOV-2026-20177",
+      "createdAt": "2026-06-07T01:52:29.562Z",
+      "updatedAt": "2026-06-07T01:53:36.304Z",
+      "name": "Maria Santos",
+      "email": "maria@example.com",
+      "phone": "+351 912 000 111",
+      "residence": "",
+      "nationality": "",
+      "destination": "United States",
+      "purpose": "Tourism / holiday",
+      "service": "Full Service",
+      "notes": "",
+      "source": "hero wizard",
+      "status": "Submitted",
+      "statusNote": "Lodged at the US consulate. Your interview is booked for next week.",
+      "history": [
+        {
+          "status": "Enquiry received",
+          "note": "Enquiry received from the website.",
+          "at": "2026-06-07T01:52:29.562Z"
+        },
+        {
+          "status": "Submitted",
+          "note": "Lodged at the US consulate. Your interview is booked for next week.",
+          "at": "2026-06-07T01:53:36.304Z"
+        }
+      ]
+    }
+  ],
+  "sessions": {
+    "b4459a9f90c146de4e9814347481c5c27f761e0643ddadbc": {
+      "username": "admin",
+      "expires": 1780840382695
+    }
+  },
+  "admin": {
+    "username": "admin",
+    "salt": "0e276b93b57474fd6292b474acdc32c7",
+    "hash": "bbc0381ca96dd9d76b8d47bef9219ea70a745f9a42e392c592a66ecbbe5dffaecbe1b88e074927584d72aa6e833f136de31608b2a5e2c67fb98e2ec6ffcea990"
+  }
+}
